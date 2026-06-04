@@ -16,5 +16,7 @@ export enum Gender {
 
 export enum AvatarSize {
     Small = 120,
+    Medium = 180,
     Large = 240,
+    ExtraLarge = 360,
 }
