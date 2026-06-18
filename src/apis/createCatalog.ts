@@ -1,6 +1,6 @@
 import { ZaloApiError } from "../Errors/ZaloApiError.js";
-import type { CatalogItem } from "../models/index.js";
 import { apiFactory } from "../utils.js";
+import type { CatalogItem } from "../models/index.js";
 
 export type CreateCatalogResponse = {
     item: CatalogItem;
@@ -8,7 +8,7 @@ export type CreateCatalogResponse = {
     version_catalog: number;
 };
 
-export const createCatalogFactory = apiFactory<CreateCatalogResponse>()((api, _ctx, utils) => {
+export const createCatalogFactory = apiFactory<CreateCatalogResponse>()((api, _, utils) => {
     const serviceURL = utils.makeURL(`${api.zpwServiceMap.catalog[0]}/api/prodcatalog/catalog/create`);
 
     /**
@@ -16,7 +16,7 @@ export const createCatalogFactory = apiFactory<CreateCatalogResponse>()((api, _c
      *
      * @param catalogName catalog name
      *
-     * @note this API is used for zBasic
+     * @note this API is used for zBusiness
      * 
      * @throws {ZaloApiError}
      */
