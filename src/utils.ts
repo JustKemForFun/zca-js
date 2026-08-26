@@ -795,11 +795,9 @@ export function normalizeHolderName(input?: string) {
     const normalized = input
         .normalize("NFD")
         .replace(/[\u0300-\u036f]/g, "")
-        .replace(/đ/g, "d")
-        .replace(/Đ/g, "D")
+        .replace(/[đĐ]/g, "d")
         .toUpperCase()
-        .replace(/[^A-Z0-9 ]+/g, " ")
-        .replace(/\s+/g, " ")
+        .replace(/[^A-Z0-9]+/g, " ")
         .trim();
 
     return normalized.length >= 5 ? normalized : undefined;
