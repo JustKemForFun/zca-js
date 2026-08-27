@@ -8,18 +8,25 @@ export type BankInfo = {
 };
 
 export type BankAccount = {
-    /**
-     * The fields marked with `?` may or may not be present for the getBankAccounts and createBankAccount APIs.
-     */
     id: string;
     bin: number;
     default: boolean;
     bank_number: string;
+    /**
+     * Not returned by:
+     * - getBankAccounts
+     * - createBankAccount
+     */
     bank_logo?: string;
     holder_name: string;
     created_at: number;
     updated_at: number;
     account_id: number;
+    /**
+     * Not returned by:
+     * - getBankAccounts
+     * - createBankAccount
+     */
     bank_name?: string;
     is_default: boolean;
 };
