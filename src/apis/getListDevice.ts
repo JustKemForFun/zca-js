@@ -7,7 +7,7 @@ export type GetListDeviceResponse = {
         encIdentity: string;
         lastUpdateTs: number;
         encSignature: string;
-        companions: string[] | unknown[]; // @TODO check type later
+        companions: unknown[]; // @TODO check type later
     };
 };
 
