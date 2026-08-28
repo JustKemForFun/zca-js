@@ -25,7 +25,10 @@ export const deleteBankAccountFactory = apiFactory<DeleteBankAccountResponse>()(
      *
      * @param payload The payload containing the bank account information to delete
      *
-     * @throws {ZaloApiError}
+     * @throws {ZaloApiError} When something went wrong, with `error.code`
+     * - `114` - Invalid params
+     * - `-265` - Bank account not exists
+     * - `810` Internal Zalo error, maybe you're trying to delete a default bank account
      */
     return async function deleteBankAccount(payload: DeleteBankAccountPayload) {
         const params = {
