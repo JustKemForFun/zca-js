@@ -3,9 +3,9 @@ import type { BankAccount, BinBankCard } from "../models/index.js";
 import { apiFactory, normalizeHolderName } from "../utils.js";
 
 export type CreateBankAccountPayload = {
-    bankBin: BinBankCard;
-    bankAccountNumber: string;
-    bankAccountHolderName: string;
+    binBank: BinBankCard;
+    numAccBank: string;
+    nameAccBank: string;
 };
 
 export type CreateBankAccountResponse = BankAccount;
@@ -24,9 +24,9 @@ export const createBankAccountFactory = apiFactory<CreateBankAccountResponse>()(
      */
     return async function createBankAccount(payload: CreateBankAccountPayload) {
         const params = {
-            bin: payload.bankBin,
-            bank_number: payload.bankAccountNumber,
-            holder_name: normalizeHolderName(payload.bankAccountHolderName),
+            bin: payload.binBank,
+            bank_number: payload.numAccBank,
+            holder_name: normalizeHolderName(payload.nameAccBank),
             language: ctx.language,
         };
 
