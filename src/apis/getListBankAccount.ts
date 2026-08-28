@@ -2,24 +2,25 @@ import { ZaloApiError } from "../Errors/ZaloApiError.js";
 import type { BankAccount } from "../models/index.js";
 import { apiFactory } from "../utils.js";
 
-export type GetListBankCardResponse = {
+export type GetListBankAccountResponse = {
     hasMore: boolean;
     total: number;
     myBanks: BankAccount[];
 };
 
-export const getListBankCardFactory = apiFactory<GetListBankCardResponse>()((api, _ctx, utils) => {
+export const getListBankAccountFactory = apiFactory<GetListBankAccountResponse>()((api, _ctx, utils) => {
     const serviceURL = utils.makeURL(`${api.zpwServiceMap.zimsg[0]}/api/transfer/list`);
 
     /**
-     * Get list bank card
+     * Get list bank accounts
      *
      * @param page Page number (default: 0)
      * @param limit Number of items to retrieve (default: 20)
      *
-     * @throws {ZaloApiError}
+     * @throws {ZaloApiError} When something went wrong, with `error.code`
+     * - `114` - Invalid params
      */
-    return async function getListBankCard(page: number = 0, limit: number = 20) {
+    return async function getListBankAccount(page: number = 0, limit: number = 20) {
         const params = {
             page: page,
             limit: limit,

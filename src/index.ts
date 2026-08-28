@@ -72,7 +72,7 @@ export type { GetGroupMembersInfoResponse, GroupMemberProfile } from "./apis/get
 export type { GetHiddenConversationsResponse } from "./apis/getHiddenConversations.js";
 export type { GetLabelsResponse } from "./apis/getLabels.js";
 export type { GetListBankResponse } from "./apis/getListBank.js";
-export type { GetListBankCardResponse } from "./apis/getListBankCard.js";
+export type { GetListBankAccountResponse } from "./apis/getListBankAccount.js";
 export type { BoardItem, GetListBoardResponse, ListBoardOptions } from "./apis/getListBoard.js";
 export type { GetListDeviceResponse } from "./apis/getListDevice.js";
 export type { GetListReminderResponse, ListReminderOptions, ReminderListGroup, ReminderListUser } from "./apis/getListReminder.js";
