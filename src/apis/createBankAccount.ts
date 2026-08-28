@@ -3,9 +3,9 @@ import type { BankAccount, BinBankCard } from "../models/index.js";
 import { apiFactory, normalizeHolderName } from "../utils.js";
 
 export type CreateBankAccountPayload = {
-    binBank: BinBankCard;
-    numAccBank: string;
-    nameAccBank: string;
+    bankBin: BinBankCard;
+    bankAccountNumber: string;
+    bankAccountHolderName: string;
 };
 
 export type CreateBankAccountResponse = BankAccount;
@@ -18,13 +18,15 @@ export const createBankAccountFactory = apiFactory<CreateBankAccountResponse>()(
      *
      * @param payload The payload containing the bank account information
      *
-     * @throws {ZaloApiError}
+     * @throws {ZaloApiError} When something went wrong, with `error.code`
+     * - `-263` - Bank account already exists
+     * - `810` - Internal Zalo error, might be invalid input
      */
     return async function createBankAccount(payload: CreateBankAccountPayload) {
         const params = {
-            bin: payload.binBank,
-            bank_number: payload.numAccBank,
-            holder_name: normalizeHolderName(payload.nameAccBank),
+            bin: payload.bankBin,
+            bank_number: payload.bankAccountNumber,
+            holder_name: normalizeHolderName(payload.bankAccountHolderName),
             language: ctx.language,
         };
 
