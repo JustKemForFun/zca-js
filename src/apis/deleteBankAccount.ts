@@ -7,10 +7,6 @@ export type DeleteBankAccountPayload = {
     isDefault: boolean;
 };
 
-/**
- * I'm really confused that the list of accounts that are not mine is returned by this `api.deleteBankAccount()` T.T
- * @TODO check again later
- */
 export type DeleteBankAccountResponse = {
     hasMore: boolean;
     total: number;
