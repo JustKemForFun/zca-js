@@ -1,15 +1,13 @@
 import { ZaloApiError } from "../Errors/ZaloApiError.js";
 import { apiFactory } from "../utils.js";
 
-export type RegisterCatalogResponse = {
-    status: boolean;
-};
+export type RegisterCatalogResponse = "";
 
 export const registerCatalogFactory = apiFactory<RegisterCatalogResponse>()((api, _ctx, utils) => {
     const serviceURL = utils.makeURL(`${api.zpwServiceMap.catalog[0]}/api/prodcatalog/catalog/register`);
 
     /**
-     * Register catalog
+     * Register catalog?
      * 
      * @param enable enable or disable catalog
      * 
