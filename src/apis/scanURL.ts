@@ -9,11 +9,12 @@ export const scanURLFactory = apiFactory<ScanURLResponse>()((api, _ctx, utils) =
     const serviceURL = utils.makeURL(`${api.zpwServiceMap.file[0]}/api/message/scanurl`);
 
     /**
-     * Scan URL
+     * Scan URL to check if it is safe?
      * 
-     * @param url URL to scan check if it is safe (https)
+     * @param url URL to scan
      *
-     * @throws {ZaloApiError}
+     * @throws {ZaloApiError} When something went wrong, with `error.code`
+     * - `114` - Invalid params
      */
     return async function scanURL(url: string) {
 
