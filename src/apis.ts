@@ -73,6 +73,7 @@ import { getListBankAccountFactory } from "./apis/getListBankAccount.js";
 import { getListBoardFactory } from "./apis/getListBoard.js";
 import { getListDeviceFactory } from "./apis/getListDevice.js";
 import { getListReminderFactory } from "./apis/getListReminder.js";
+import { getMiniProfilesFactory } from "./apis/getMiniProfiles.js";
 import { getMultiUsersByPhonesFactory } from "./apis/getMultiUsersByPhones.js";
 import { getMuteFactory } from "./apis/getMute.js";
 import { getOwnIdFactory } from "./apis/getOwnId.js";
@@ -234,6 +235,7 @@ export class API {
     public getListBoard: ReturnType<typeof getListBoardFactory>;
     public getListDevice: ReturnType<typeof getListDeviceFactory>;
     public getListReminder: ReturnType<typeof getListReminderFactory>;
+    public getMiniProfiles: ReturnType<typeof getMiniProfilesFactory>;
     public getMultiUsersByPhones: ReturnType<typeof getMultiUsersByPhonesFactory>;
     public getMute: ReturnType<typeof getMuteFactory>;
     public getOwnId: ReturnType<typeof getOwnIdFactory>;
@@ -395,6 +397,7 @@ export class API {
         this.getListBoard = getListBoardFactory(ctx, this);
         this.getListDevice = getListDeviceFactory(ctx, this);
         this.getListReminder = getListReminderFactory(ctx, this);
+        this.getMiniProfiles = getMiniProfilesFactory(ctx, this);
         this.getMultiUsersByPhones = getMultiUsersByPhonesFactory(ctx, this);
         this.getMute = getMuteFactory(ctx, this);
         this.getOwnId = getOwnIdFactory(ctx, this);
