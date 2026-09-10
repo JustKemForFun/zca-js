@@ -27,6 +27,12 @@ export type StickerBasic = {
     sticker_id: number;
 };
 
+export type TenorSticker = {
+  id: string;
+  cid: number;
+  eid: number;
+};
+
 export type CategoryDetail = {
     id: number;
     name: string;
