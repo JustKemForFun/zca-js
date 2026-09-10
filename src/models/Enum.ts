@@ -19,6 +19,4 @@ export enum AvatarSize {
     /** @experimental Use only if you know what you're doing. */
     Medium = 160,
     Large = 240,
-    /** @experimental Use only if you know what you're doing. */
-    ExtraLarge = 360,
 }
