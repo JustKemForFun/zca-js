@@ -52,6 +52,7 @@ import { getAvatarListFactory } from "./apis/getAvatarList.js";
 import { getAvatarUrlProfileFactory } from "./apis/getAvatarUrlProfile.js";
 import { getBizAccountFactory } from "./apis/getBizAccount.js";
 import { getCatalogListFactory } from "./apis/getCatalogList.js";
+import { getCategoryDetailFactory } from "./apis/getCategoryDetail.js";
 import { getCloseFriendsFactory } from "./apis/getCloseFriends.js";
 import { getContextFactory } from "./apis/getContext.js";
 import { getCookieFactory } from "./apis/getCookie.js";
@@ -92,6 +93,7 @@ import { getReminderFactory } from "./apis/getReminder.js";
 import { getReminderResponsesFactory } from "./apis/getReminderResponses.js";
 import { getSentFriendRequestFactory } from "./apis/getSentFriendRequest.js";
 import { getSettingsFactory } from "./apis/getSettings.js";
+import { getStickerCategoriesFactory } from "./apis/getStickerCategories.js";
 import { getStickerCategoryDetailFactory } from "./apis/getStickerCategoryDetail.js";
 import { getStickersFactory } from "./apis/getStickers.js";
 import { getStickersDetailFactory } from "./apis/getStickersDetail.js";
@@ -218,6 +220,7 @@ export class API {
     public getAvatarUrlProfile: ReturnType<typeof getAvatarUrlProfileFactory>;
     public getBizAccount: ReturnType<typeof getBizAccountFactory>;
     public getCatalogList: ReturnType<typeof getCatalogListFactory>;
+    public getCategoryDetail: ReturnType<typeof getCategoryDetailFactory>;
     public getCloseFriends: ReturnType<typeof getCloseFriendsFactory>;
     public getContext: ReturnType<typeof getContextFactory>;
     public getCookie: ReturnType<typeof getCookieFactory>;
@@ -258,6 +261,7 @@ export class API {
     public getReminderResponses: ReturnType<typeof getReminderResponsesFactory>;
     public getSentFriendRequest: ReturnType<typeof getSentFriendRequestFactory>;
     public getSettings: ReturnType<typeof getSettingsFactory>;
+    public getStickerCategories: ReturnType<typeof getStickerCategoriesFactory>;
     public getStickerCategoryDetail: ReturnType<typeof getStickerCategoryDetailFactory>;
     public getStickers: ReturnType<typeof getStickersFactory>;
     public getStickersDetail: ReturnType<typeof getStickersDetailFactory>;
@@ -384,6 +388,7 @@ export class API {
         this.getAvatarUrlProfile = getAvatarUrlProfileFactory(ctx, this);
         this.getBizAccount = getBizAccountFactory(ctx, this);
         this.getCatalogList = getCatalogListFactory(ctx, this);
+        this.getCategoryDetail = getCategoryDetailFactory(ctx, this);
         this.getCloseFriends = getCloseFriendsFactory(ctx, this);
         this.getContext = getContextFactory(ctx, this);
         this.getCookie = getCookieFactory(ctx, this);
@@ -425,6 +430,7 @@ export class API {
         this.getReminderResponses = getReminderResponsesFactory(ctx, this);
         this.getSentFriendRequest = getSentFriendRequestFactory(ctx, this);
         this.getSettings = getSettingsFactory(ctx, this);
+        this.getStickerCategories = getStickerCategoriesFactory(ctx, this);
         this.getStickerCategoryDetail = getStickerCategoryDetailFactory(ctx, this);
         this.getStickers = getStickersFactory(ctx, this);
         this.getStickersDetail = getStickersDetailFactory(ctx, this);

@@ -26,3 +26,25 @@ export type StickerBasic = {
     cate_id: number;
     sticker_id: number;
 };
+
+export type CategoryDetail = {
+    id: number;
+    name: string;
+    desc: string;
+    totalImage: number;
+    thumbUrl: string;
+    iconUrl: string;
+    iconPreview: string;
+    price: number;
+    group: number;
+    status: number;
+    version: number;
+    thumbImg: string;
+    source: string;
+    type: number;
+    sourceUrl: string;
+    permission: number;
+    expireTime: number;
+    is_hidden: number;
+    order: number;
+};
