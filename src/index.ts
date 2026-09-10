@@ -128,6 +128,7 @@ export type { ResetHiddenConversPinResponse } from "./apis/resetHiddenConversPin
 export type { ReuseAvatarResponse } from "./apis/reuseAvatar.js";
 export type { ReviewPendingMemberRequestPayload, ReviewPendingMemberRequestResponse } from "./apis/reviewPendingMemberRequest.js";
 export type { ScanURLResponse } from "./apis/scanURL.js";
+export type { SearchGiphyGifResponse } from "./apis/searchGiphyGif.js";
 export type { SearchStickerResponse } from "./apis/searchSticker.js";
 export type { SendBankCardPayload, SendBankCardResponse } from "./apis/sendBankCard.js";
 export type { SendCardOptions, SendCardResponse } from "./apis/sendCard.js";

@@ -126,6 +126,7 @@ import { resetHiddenConversPinFactory } from "./apis/resetHiddenConversPin.js";
 import { reuseAvatarFactory } from "./apis/reuseAvatar.js";
 import { reviewPendingMemberRequestFactory } from "./apis/reviewPendingMemberRequest.js";
 import { scanURLFactory } from "./apis/scanURL.js";
+import { searchGiphyGifFactory } from "./apis/searchGiphyGif.js";
 import { searchStickerFactory } from "./apis/searchSticker.js";
 import { sendBankCardFactory } from "./apis/sendBankCard.js";
 import { sendCardFactory } from "./apis/sendCard.js";
@@ -298,6 +299,7 @@ export class API {
     public reuseAvatar: ReturnType<typeof reuseAvatarFactory>;
     public reviewPendingMemberRequest: ReturnType<typeof reviewPendingMemberRequestFactory>;
     public scanURL: ReturnType<typeof scanURLFactory>;
+    public searchGiphyGif: ReturnType<typeof searchGiphyGifFactory>;
     public searchSticker: ReturnType<typeof searchStickerFactory>;
     public sendBankCard: ReturnType<typeof sendBankCardFactory>;
     public sendCard: ReturnType<typeof sendCardFactory>;
@@ -471,6 +473,7 @@ export class API {
         this.reuseAvatar = reuseAvatarFactory(ctx, this);
         this.reviewPendingMemberRequest = reviewPendingMemberRequestFactory(ctx, this);
         this.scanURL = scanURLFactory(ctx, this);
+        this.searchGiphyGif = searchGiphyGifFactory(ctx, this);
         this.searchSticker = searchStickerFactory(ctx, this);
         this.sendBankCard = sendBankCardFactory(ctx, this);
         this.sendCard = sendCardFactory(ctx, this);
