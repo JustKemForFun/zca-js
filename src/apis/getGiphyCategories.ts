@@ -18,6 +18,9 @@ export const getGiphyCategoriesFactory = apiFactory<GetGiphyCategoriesResponse>(
 
     /**
      * Get giphy categories
+     * 
+     * @param offset The offset of the categories to get
+     * @param limit The limit of the categories to get (I don't see any change when limit)
      *
      * @throws {ZaloApiError}
      */
