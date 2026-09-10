@@ -10,10 +10,16 @@ export const encryptGlobalIDFactory = apiFactory<EncryptGlobalIDResponse>()((api
 
     /**
      * Encrypt global ID
+     * 
+     * @param globalID User ID or list of user IDs
      *
      * @throws {ZaloApiError}
      */
-    return async function encryptGlobalID(globalID: string[]) {
+    return async function encryptGlobalID(globalID: string | string[]) {
+        if (!globalID) throw new ZaloApiError("Missing global id");
+
+        if (!Array.isArray(globalID)) globalID = [globalID];
+
         const params = {
             noiseUids: JSON.stringify(globalID),
         };

@@ -13,6 +13,8 @@ export const getExtraFriendInfoFactory = apiFactory<GetExtraFriendInfoResponse>(
 
     /**
      * Get extra friend info
+     * 
+     * @param friendID Friend ID or list of friend IDs
      *
      * @throws {ZaloApiError}
      */

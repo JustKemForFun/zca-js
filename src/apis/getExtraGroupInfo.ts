@@ -13,6 +13,8 @@ export const getExtraGroupInfoFactory = apiFactory<GetExtraGroupInfoResponse>()(
 
     /**
      * Get extra group info
+     * 
+     * @param groupID Group ID or list of group IDs
      *
      * @throws {ZaloApiError}
      */
