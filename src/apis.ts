@@ -55,6 +55,7 @@ import { getCatalogListFactory } from "./apis/getCatalogList.js";
 import { getCloseFriendsFactory } from "./apis/getCloseFriends.js";
 import { getContextFactory } from "./apis/getContext.js";
 import { getCookieFactory } from "./apis/getCookie.js";
+import { getExtraFriendInfoFactory } from "./apis/getExtraFriendInfo.js";
 import { getExtraGroupInfoFactory } from "./apis/getExtraGroupInfo.js";
 import { getFriendBoardListFactory } from "./apis/getFriendBoardList.js";
 import { getFriendOnlinesFactory } from "./apis/getFriendOnlines.js";
@@ -220,6 +221,7 @@ export class API {
     public getCloseFriends: ReturnType<typeof getCloseFriendsFactory>;
     public getContext: ReturnType<typeof getContextFactory>;
     public getCookie: ReturnType<typeof getCookieFactory>;
+    public getExtraFriendInfo: ReturnType<typeof getExtraFriendInfoFactory>;
     public getExtraGroupInfo: ReturnType<typeof getExtraGroupInfoFactory>;
     public getFriendBoardList: ReturnType<typeof getFriendBoardListFactory>;
     public getFriendOnlines: ReturnType<typeof getFriendOnlinesFactory>;
@@ -385,6 +387,8 @@ export class API {
         this.getCloseFriends = getCloseFriendsFactory(ctx, this);
         this.getContext = getContextFactory(ctx, this);
         this.getCookie = getCookieFactory(ctx, this);
+        this.getExtraFriendInfo = getExtraFriendInfoFactory(ctx, this);
+        this.getExtraFriendInfo = getExtraFriendInfoFactory(ctx, this);
         this.getExtraGroupInfo = getExtraGroupInfoFactory(ctx, this);
         this.getFriendBoardList = getFriendBoardListFactory(ctx, this);
         this.getFriendOnlines = getFriendOnlinesFactory(ctx, this);
