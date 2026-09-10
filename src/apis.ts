@@ -97,6 +97,7 @@ import { getStickerCategoriesFactory } from "./apis/getStickerCategories.js";
 import { getStickerCategoryDetailFactory } from "./apis/getStickerCategoryDetail.js";
 import { getStickersFactory } from "./apis/getStickers.js";
 import { getStickersDetailFactory } from "./apis/getStickersDetail.js";
+import { getStickerSuggestedKeywordsFactory } from "./apis/getStickerSuggestedKeywords.js";
 import { getUnreadMarkFactory } from "./apis/getUnreadMark.js";
 import { getUserInfoFactory } from "./apis/getUserInfo.js";
 import { inviteUserToGroupsFactory } from "./apis/inviteUserToGroups.js";
@@ -265,6 +266,7 @@ export class API {
     public getStickerCategoryDetail: ReturnType<typeof getStickerCategoryDetailFactory>;
     public getStickers: ReturnType<typeof getStickersFactory>;
     public getStickersDetail: ReturnType<typeof getStickersDetailFactory>;
+    public getStickerSuggestedKeywords: ReturnType<typeof getStickerSuggestedKeywordsFactory>;
     public getUnreadMark: ReturnType<typeof getUnreadMarkFactory>;
     public getUserInfo: ReturnType<typeof getUserInfoFactory>;
     public inviteUserToGroups: ReturnType<typeof inviteUserToGroupsFactory>;
@@ -434,6 +436,7 @@ export class API {
         this.getStickerCategoryDetail = getStickerCategoryDetailFactory(ctx, this);
         this.getStickers = getStickersFactory(ctx, this);
         this.getStickersDetail = getStickersDetailFactory(ctx, this);
+        this.getStickerSuggestedKeywords = getStickerSuggestedKeywordsFactory(ctx, this);
         this.getUnreadMark = getUnreadMarkFactory(ctx, this);
         this.getUserInfo = getUserInfoFactory(ctx, this);
         this.inviteUserToGroups = inviteUserToGroupsFactory(ctx, this);

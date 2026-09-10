@@ -98,6 +98,7 @@ export type { GetSettingsResponse } from "./apis/getSettings.js";
 export type { GetStickerCategoryiesResponse } from "./apis/getStickerCategories.js";
 export type { GetStickerCategoryDetailResponse } from "./apis/getStickerCategoryDetail.js";
 export type { StickerDetailResponse } from "./apis/getStickersDetail.js";
+export type { GetStickerSuggestedKeywordsResponse } from "./apis/getStickerSuggestedKeywords.js";
 export type { GetUnreadMarkResponse, UnreadMark } from "./apis/getUnreadMark.js";
 export type { ProfileInfo, UserInfoResponse } from "./apis/getUserInfo.js";
 export type { InviteUserToGroupsResponse } from "./apis/inviteUserToGroups.js";

@@ -11,13 +11,13 @@ export const getCategoryDetailFactory = apiFactory<GetCategoryDetailResponse>()(
     /**
      * Get category detail
      *
-     * @param cateId Category ID
+     * @param categoryId Category ID
      *
      * @throws {ZaloApiError}
      */
-    return async function getCategoryDetail(cateId: number) {
+    return async function getCategoryDetail(categoryId: number) {
         const params = {
-            cid: cateId,
+            cid: categoryId,
         };
 
         const encryptedParams = utils.encodeAES(JSON.stringify(params));
