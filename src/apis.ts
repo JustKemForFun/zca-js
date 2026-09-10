@@ -165,6 +165,7 @@ import { uploadProductPhotoFactory } from "./apis/uploadProductPhoto.js";
 import { votePollFactory } from "./apis/votePoll.js";
 import { customFactory } from "./apis/custom.js";
 import type { ZPWServiceMap, ContextSession } from "./context.js";
+import { getGiphyCategoriesFactory } from "./apis/getGiphyCategories.js";
 
 export class API {
     public zpwServiceMap: ZPWServiceMap;
@@ -233,6 +234,7 @@ export class API {
     public getFriendRecommendations: ReturnType<typeof getFriendRecommendationsFactory>;
     public getFriendRequestStatus: ReturnType<typeof getFriendRequestStatusFactory>;
     public getFullAvatar: ReturnType<typeof getFullAvatarFactory>;
+    public getGiphyCategories: ReturnType<typeof getGiphyCategoriesFactory>;
     public getGroupBlockedMember: ReturnType<typeof getGroupBlockedMemberFactory>;
     public getGroupChatHistory: ReturnType<typeof getGroupChatHistoryFactory>;
     public getGroupInfo: ReturnType<typeof getGroupInfoFactory>;
@@ -404,6 +406,7 @@ export class API {
         this.getFriendRecommendations = getFriendRecommendationsFactory(ctx, this);
         this.getFriendRequestStatus = getFriendRequestStatusFactory(ctx, this);
         this.getFullAvatar = getFullAvatarFactory(ctx, this);
+        this.getGiphyCategories = getGiphyCategoriesFactory(ctx, this);
         this.getGroupBlockedMember = getGroupBlockedMemberFactory(ctx, this);
         this.getGroupChatHistory = getGroupChatHistoryFactory(ctx, this);
         this.getGroupInfo = getGroupInfoFactory(ctx, this);

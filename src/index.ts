@@ -66,6 +66,7 @@ export type { GetFriendOnlinesResponse, GetFriendOnlinesStatus } from "./apis/ge
 export type { GetFriendRecommendationsResponse, FriendRecommendationsCollapseMsgListConfig, FriendRecommendationsDataInfo, FriendRecommendationsRecommItem } from "./apis/getFriendRecommendations.js";
 export type { GetFriendRequestStatusResponse } from "./apis/getFriendRequestStatus.js";
 export type { GetFullAvatarResponse } from "./apis/getFullAvatar.js";
+export type { GetGiphyCategoriesResponse } from "./apis/getGiphyCategories.js";
 export type { GetGroupBlockedMemberPayload, GetGroupBlockedMemberResponse } from "./apis/getGroupBlockedMember.js";
 export type { GetGroupChatHistoryResponse } from "./apis/getGroupChatHistory.js";
 export type { GroupInfoPendingApprove, GroupInfoResponse } from "./apis/getGroupInfo.js";
