@@ -63,6 +63,8 @@ import { getFriendOnlinesFactory } from "./apis/getFriendOnlines.js";
 import { getFriendRecommendationsFactory } from "./apis/getFriendRecommendations.js";
 import { getFriendRequestStatusFactory } from "./apis/getFriendRequestStatus.js";
 import { getFullAvatarFactory } from "./apis/getFullAvatar.js";
+import { getGiphyCategoriesFactory } from "./apis/getGiphyCategories.js";
+import { getGiphyGifTrendingFactory } from "./apis/getGiphyGifTrending.js";
 import { getGroupBlockedMemberFactory } from "./apis/getGroupBlockedMember.js";
 import { getGroupChatHistoryFactory } from "./apis/getGroupChatHistory.js";
 import { getGroupInfoFactory } from "./apis/getGroupInfo.js";
@@ -165,7 +167,6 @@ import { uploadProductPhotoFactory } from "./apis/uploadProductPhoto.js";
 import { votePollFactory } from "./apis/votePoll.js";
 import { customFactory } from "./apis/custom.js";
 import type { ZPWServiceMap, ContextSession } from "./context.js";
-import { getGiphyCategoriesFactory } from "./apis/getGiphyCategories.js";
 
 export class API {
     public zpwServiceMap: ZPWServiceMap;
@@ -235,6 +236,7 @@ export class API {
     public getFriendRequestStatus: ReturnType<typeof getFriendRequestStatusFactory>;
     public getFullAvatar: ReturnType<typeof getFullAvatarFactory>;
     public getGiphyCategories: ReturnType<typeof getGiphyCategoriesFactory>;
+    public getGiphyGifTrending: ReturnType<typeof getGiphyGifTrendingFactory>;
     public getGroupBlockedMember: ReturnType<typeof getGroupBlockedMemberFactory>;
     public getGroupChatHistory: ReturnType<typeof getGroupChatHistoryFactory>;
     public getGroupInfo: ReturnType<typeof getGroupInfoFactory>;
@@ -407,6 +409,7 @@ export class API {
         this.getFriendRequestStatus = getFriendRequestStatusFactory(ctx, this);
         this.getFullAvatar = getFullAvatarFactory(ctx, this);
         this.getGiphyCategories = getGiphyCategoriesFactory(ctx, this);
+        this.getGiphyGifTrending = getGiphyGifTrendingFactory(ctx, this);
         this.getGroupBlockedMember = getGroupBlockedMemberFactory(ctx, this);
         this.getGroupChatHistory = getGroupChatHistoryFactory(ctx, this);
         this.getGroupInfo = getGroupInfoFactory(ctx, this);
