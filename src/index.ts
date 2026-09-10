@@ -28,6 +28,7 @@ export type { CreateNoteOptions, CreateNoteResponse } from "./apis/createNote.js
 export type { CreatePollOptions, CreatePollResponse } from "./apis/createPoll.js";
 export type { CreateProductCatalogPayload, CreateProductCatalogResponse } from "./apis/createProductCatalog.js";
 export type { CreateReminderOptions, CreateReminderResponse, CreateReminderUser, CreateReminderGroup } from "./apis/createReminder.js";
+export type { DecryptGlobalIDResponse } from "./apis/decryptGlobalID.js";
 export type { DeleteAutoReplyResponse } from "./apis/deleteAutoReply.js";
 export type { DeleteAvatarResponse } from "./apis/deleteAvatar.js";
 export type { DeleteBankAccountPayload, DeleteBankAccountResponse } from "./apis/deleteBankAccount.js";
@@ -41,6 +42,7 @@ export type { DisperseGroupResponse } from "./apis/disperseGroup.js";
 export type { EditNoteOptions, EditNoteResponse } from "./apis/editNote.js";
 export type { EditReminderGroup, EditReminderUser, EditReminderOptions, EditReminderResponse } from "./apis/editReminder.js";
 export type { EnableGroupLinkResponse } from "./apis/enableGroupLink.js";
+export type { EncryptGlobalIDResponse } from "./apis/encryptGlobalID.js";
 export type { FetchAccountInfoResponse } from "./apis/fetchAccountInfo.js";
 export type { FindUserResponse } from "./apis/findUser.js";
 export type { FindUserByUsernameResponse } from "./apis/findUserByUsername.js";
@@ -56,6 +58,7 @@ export type { GetAvatarUrlProfileResponse } from "./apis/getAvatarUrlProfile.js"
 export type { GetBizAccountResponse } from "./apis/getBizAccount.js";
 export type { GetCatalogListPayload, GetCatalogListResponse } from "./apis/getCatalogList.js";
 export type { GetCloseFriendsResponse } from "./apis/getCloseFriends.js";
+export type { GetExtraGroupInfoResponse } from "./apis/getExtraGroupInfo.js";
 export type { GetFriendBoardListResponse } from "./apis/getFriendBoardList.js";
 export type { GetFriendOnlinesResponse, GetFriendOnlinesStatus } from "./apis/getFriendOnlines.js";
 export type { GetFriendRecommendationsResponse, FriendRecommendationsCollapseMsgListConfig, FriendRecommendationsDataInfo, FriendRecommendationsRecommItem } from "./apis/getFriendRecommendations.js";
