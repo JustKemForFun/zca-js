@@ -64,6 +64,7 @@ import { getFriendRecommendationsFactory } from "./apis/getFriendRecommendations
 import { getFriendRequestStatusFactory } from "./apis/getFriendRequestStatus.js";
 import { getFullAvatarFactory } from "./apis/getFullAvatar.js";
 import { getGiphyCategoriesFactory } from "./apis/getGiphyCategories.js";
+import { getGiphyGifDictionariesFactory } from "./apis/getGiphyGifDictionaries.js";
 import { getGiphyGifTrendingFactory } from "./apis/getGiphyGifTrending.js";
 import { getGroupBlockedMemberFactory } from "./apis/getGroupBlockedMember.js";
 import { getGroupChatHistoryFactory } from "./apis/getGroupChatHistory.js";
@@ -237,6 +238,7 @@ export class API {
     public getFriendRequestStatus: ReturnType<typeof getFriendRequestStatusFactory>;
     public getFullAvatar: ReturnType<typeof getFullAvatarFactory>;
     public getGiphyCategories: ReturnType<typeof getGiphyCategoriesFactory>;
+    public getGiphyGifDictionaries: ReturnType<typeof getGiphyGifDictionariesFactory>;
     public getGiphyGifTrending: ReturnType<typeof getGiphyGifTrendingFactory>;
     public getGroupBlockedMember: ReturnType<typeof getGroupBlockedMemberFactory>;
     public getGroupChatHistory: ReturnType<typeof getGroupChatHistoryFactory>;
@@ -411,6 +413,7 @@ export class API {
         this.getFriendRequestStatus = getFriendRequestStatusFactory(ctx, this);
         this.getFullAvatar = getFullAvatarFactory(ctx, this);
         this.getGiphyCategories = getGiphyCategoriesFactory(ctx, this);
+        this.getGiphyGifDictionaries = getGiphyGifDictionariesFactory(ctx, this);
         this.getGiphyGifTrending = getGiphyGifTrendingFactory(ctx, this);
         this.getGroupBlockedMember = getGroupBlockedMemberFactory(ctx, this);
         this.getGroupChatHistory = getGroupChatHistoryFactory(ctx, this);
